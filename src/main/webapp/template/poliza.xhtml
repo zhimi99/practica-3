@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Sistema Bancario | Poliza</title>
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet"
+		href="template/../plugins/fontawesome-free/css/all.min.css" />
+	<!-- Ionicons -->
+	<link rel="stylesheet"
+		href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+	<!-- Theme style -->
+	<link rel="stylesheet" href="template/../dist/css/adminlte.min.css" />
+	<!-- Google Font: Source Sans Pro -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
+		rel="stylesheet" />
+</h:head>
+<body>
+
+	<div class="container">
+		<h:form class="form-horizontal form material"
+			enctype="multipart/form-data">
+			<script>
+					function alerta() {
+						alert("Confirmar Solicitud");
+					}
+			</script>
+
+
+			<div class="form-group">
+				<label for="txtPlazo" class="col-md-12">plazo:</label>
+				<div class="col-md-12">
+					<h:inputText id="txtPlazo" value="#{polizaB.poliza.plazo}"
+						class="form-control form-control-line" />
+					<h:message for="txtPlazo" />
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="txtMonto" class="col-md-12">Monto:</label>
+				<div class="col-md-12">
+					<h:inputText id="txtMonto" value="#{polizaB.poliza.monto}"
+						class="form-control form-control-line" />
+					<h:message for="txtMonto" />
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="txtCedulaImg" class="col-md-12">Cedula:</label>
+				<div>
+					<p:fileUpload value="#{polizaB.fileCedula}" mode="simple" />
+
+				</div>
+
+			</div>
+
+
+			<div class="form-group">
+				<div class="col-sm-6">
+					<h:commandButton value="Registar Poliza"
+						action="#{polizaB.agregarPoliza()}"  class="btn btn-success" onclick="alerta()">
+
+					</h:commandButton>
+				</div>
+			</div>
+
+		</h:form>
+	</div>
+
+
+</body>
+</html>

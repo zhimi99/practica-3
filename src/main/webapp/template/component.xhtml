@@ -1,0 +1,38 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:cc="http://java.sun.com/jsf/composite"
+      xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:h="http://java.sun.com/jsf/html">
+
+<!-- INTERFACE -->
+<cc:interface componentType="dateRange">
+    <cc:attribute name="fromLabel"/>
+    <cc:attribute name="toLabel"/>
+    <cc:attribute name="value" type="so.example.DateRange"/>
+    <cc:attribute name="onvaluechanged"/>
+</cc:interface>
+
+<!-- IMPLEMENTATION -->
+<cc:implementation>
+    <table>
+        <tr>
+            <td style="width: 15%; border: none;">
+                <h:outputText value="#{cc.attrs.fromLabel}"/>
+            </td>
+            <td style="width: 35%; border: none;">
+                <p:calendar id="startDateCalendar" value="#{cc.attrs.value.from}" maxdate="#{cc.attrs.value.to}">
+                    <p:ajax event="dateSelect" update="endDateCalendar" oncomplete="#{cc.attrs.onvaluechanged}"/>
+                </p:calendar>
+            </td>
+            <td style="width: 15%; border: none;">
+                <h:outputText value="#{cc.attrs.toLabel}"/>
+            </td>
+            <td style="width: 35%; border: none;">
+                <p:calendar id="endDateCalendar" value="#{cc.attrs.value.to}" mindate="#{cc.attrs.value.from}" maxdate="#{cc.attrs.value.now}">
+                    <p:ajax event="dateSelect" update="startDateCalendar" oncomplete="#{cc.attrs.onvaluechanged}"/>
+                </p:calendar>
+            </td>
+        </tr>
+    </table>
+</cc:implementation>

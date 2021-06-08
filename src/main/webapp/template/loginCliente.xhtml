@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+      
+
+<h:head>
+	<title>Banca Virtual</title>
+	<link rel="stylesheet" type="text/css" href="dist/css/style.css"
+		media="screen" />
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+	<link rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" />
+</h:head>
+<body>
+	<div>
+		<div class="container">
+			<h:form>
+				<p:messages autoUpdate="true" />
+
+				<center>
+					<h1>Banca Virtual</h1>
+				</center>
+
+				<center>
+					<div>
+
+						<h3>Inicio de Sesion</h3>
+						<div class="form-row">
+							<h:outputLabel value="Correo: " for="correo" />
+							<h:inputText class="form-control"
+								value="#{clienteMB.newcliente.correo}" id="correo" requiered="true" />
+							<h:message for="correo" />
+						</div>
+
+						<div class="form-row">
+							<h:outputLabel value="Clave: " for="clave" />
+							<h:inputText class="form-control"
+								value="#{clienteMB.newcliente.clave}" id="clave" requiered="true" />
+							<h:message for="clave" />
+						</div>
+						
+						<div class="form-row">
+						<h:commandButton class="float-right login_btn" icon="ui-icon-key" value="login"
+							action="#{clienteMB.login()}" />
+						</div>
+					</div>
+				</center>
+
+			</h:form>
+		</div>
+
+	</div>
+
+</body>
+</html>
