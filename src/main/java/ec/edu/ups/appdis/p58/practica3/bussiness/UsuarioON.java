@@ -1,10 +1,7 @@
 package ec.edu.ups.appdis.p58.practica3.bussiness;
 
-import java.util.Date;
-
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-
 import ec.edu.ups.appdis.p58.practica3.dao.UsuarioDAO;
 import ec.edu.ups.appdis.p58.practica3.entity.Usuario;
 

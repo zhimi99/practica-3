@@ -3,13 +3,10 @@ package ec.edu.ups.appdis.p58.practica3.view;
 
 import java.util.List;
 import java.util.UUID;
-
 import javax.annotation.PostConstruct;
-import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-
 import ec.edu.ups.appdis.p58.practica3.bussiness.UsuarioON;
 import ec.edu.ups.appdis.p58.practica3.entity.Usuario;
 
@@ -22,9 +19,6 @@ public class UsuarioBean {
 	
 @Inject
 UsuarioON usuarioON;
-
-@Inject
-private FacesContext facesContext;
 
 private Usuario usuario;
 

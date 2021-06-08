@@ -17,7 +17,6 @@ import javax.persistence.PersistenceContext;
 public class Resources {
 
 	// String dsName = "java:comp/DefaultDataSource";
-	/// String dsName = "java:comp/datasources/bancoDS";
 	String dsName = "java:jboss/datasources/tiendaDS";
 
 	/*

@@ -23,13 +23,13 @@ public class Usuario implements Serializable{
 	private String username;
 	private String password;
 	private String rol;
-	private Date fechaRegistro;
 	private String nombres;
 	private String apelidos;
 	private String cedula;
 	private String direccion;
 	private String telefono;
 	private Date fechaNacimiento;
+	private Date fechaRegistro;
 	
 	public String getUsername() {
 		return username;

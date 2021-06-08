@@ -27,37 +27,6 @@ public class UsuarioDAO {
 	}
 	
 	
-
-	/*
-	public Usuario buscarUsuarioCedula(String cedula) {
-		Usuario cli = new Usuario();
-		try {
-			String jpql = "SELECT c FROM Usuario c where c.cedula = :cedula";
-			Query query = em.createQuery(jpql, Usuario.class);
-			query.setParameter("cedula", cedula);
-			cli = (Usuario) query.getSingleResult();
-		} catch (Exception e) {
-			cli = null;
-		}
-
-		return cli;
-	}*//*
-	
-	public Usuario buscarUsuarioCuenta(int cuenta) {
-		System.out.println("Numero de cuenta en dao "+cuenta);
-		Usuario cli = new Usuario();
-		try {
-			String jpql = "SELECT c FROM Usuario c where c.cuenta = :cuenta";
-			Query query = em.createQuery(jpql, Usuario.class);
-			query.setParameter("cuenta", cuenta);
-			cli = (Usuario) query.getSingleResult();
-			System.out.println("en dao >>>>> "+cli.toString());
-		} catch (Exception e) {
-			cli = null;
-		}
-
-		return cli;
-	}*/
 	public void actualizarUsuario(Usuario Usuario ) {
 		em.merge(Usuario);
 	}
