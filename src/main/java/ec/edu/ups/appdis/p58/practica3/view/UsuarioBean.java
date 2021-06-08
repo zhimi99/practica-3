@@ -30,7 +30,7 @@ private Usuario usuario;
 
 private List<Usuario> usuarios;
 
-
+ 
     /**
      * Default constructor. 
      */
